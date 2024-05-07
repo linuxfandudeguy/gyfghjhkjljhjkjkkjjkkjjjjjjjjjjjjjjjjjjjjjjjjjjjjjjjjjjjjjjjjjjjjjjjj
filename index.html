@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        main form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Password Reset</h1>
+            <p>**Account Security Notice**</p>
+        </header>
+        <main>
+            <form id="resetForm">
+                <label for="email">Enter your password:</label>
+                <input type="password" id="email" name="email" required>
+                <button type="submit">Reset Password</button>
+            </form>
+            <p>If you did not initiate this action or believe your account has been compromised, please contact our
+                support team immediately at <strong>support@example.com</strong>.</p>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('resetForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value;
+            // You can add more logic here to handle the password reset process, like sending an email or displaying a success message.
+            alert('A password reset link has been sent to ' + email);
+            document.getElementById('resetForm').reset();
+        });
+    </script>
+</body>
+
+</html>
